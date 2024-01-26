@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@8.0.0/dist/cjs/index.min.js"> </script>  -->
+    <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@8.0.0/dist/browser/signalr.min.js">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label for="">Your name:</label>
+            <input type="text" name="" id="displayname">
+        </div>
+        <div>
+            <input type="text" name="" id="message">
+            <input type="button" name="" id="sendmessage" value="Send">
+        </div>
+
+        <div>
+            <ul id="dicussion">
+
+            </ul>
+        </div>
+        
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@8.0.0/dist/cjs/index.min.js"> </script>  -->
+
+    <script>var exports = {};</script>
+    <script  src="./index.js"> </script> 
+
+    <!-- <script>
+        importScripts('signalr.js')
+        var connection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
+
+        connection.start().catch(function (err) {
+            return console.error(err.toString())
+        });
+
+        document.getElementById("sendmessage").addEventListener("click", function (event) {
+            var user = document.getElementById("displayname").value;
+            var message = document.getElementById("message").value;
+
+            connection.invoke("SendMessage", user, message).catch(function (err) {
+                return console.error(err.toString())
+            })
+
+            event.preventDefault();
+        })
+
+        connection.on("ReceiveMessage", function (user, message) {
+            var encodedMsg = user + ": " + message;
+            var li = document.createElement('li')
+            li.textContent = encodedMsg;
+            document.getElementById('discussion').appendChild(li)
+        })
+    </script> -->
+    </body>
+</html>
